@@ -1,0 +1,55 @@
+.slider_container {  
+ /*   position: absolute;  
+    height: 25px;  
+    top: 170px;  
+    left: 165px;  
+
+	border:1px solid green;*/
+	margin-top:10px;
+}  
+.minus {  
+    background: url(/images/minus-trans.png) no-repeat;  
+    height: 9px;  
+    width: 25px;  
+    overflow: hidden;  
+    float: left;  
+    cursor: pointer;  
+}  
+.slider_bar {  
+    background: url(/images/bar-trans.png) no-repeat;  
+    height: 9px;  
+    width: 316px;  
+    float: left;  
+    margin: 0px 5px;  
+    position: relative;  
+}  
+.add {  
+    background: url(/images/add-trans.png) no-repeat;  
+    height: 25px;  
+    width: 23px;  
+    float: left;  
+    position: relative;  
+    top: -5px;  
+    cursor: pointer;  
+}  
+.slider_handle {  
+    background: url(/images/selector-trans.png) no-repeat;  
+    height: 25px;  
+    width: 12px;  
+    position: absolute;  
+    top: -8px;  
+}  
+#slider_caption {  
+    background: url(/images/caption-trans.png) no-repeat;  
+    height: 45px;  
+    width: 38px;  
+    overflow: hidden;  
+    position: absolute;  
+    top: -50px;  
+    margin-left:-10px;  
+    padding: 5px 0px 0px 0px;  
+    font-family: "Myriad Pro";  
+    color: #36665d;  
+    font-weight: bold;  
+    text-align: center;  
+}
