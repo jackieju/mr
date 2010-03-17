@@ -1,0 +1,24 @@
+<h1>Editing book</h1>
+
+<% form_for(@book) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :auther %><br />
+    <%= f.text_field :auther %>
+  </p>
+  <p>
+    <%= f.label :uploaded_by %><br />
+    <%= f.text_field :uploaded_by %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @book %> |
+<%= link_to 'Back', books_path %>

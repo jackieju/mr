@@ -1,0 +1,43 @@
+<div style="float:left;border:0px solid red;">
+<% form_tag do -%>
+<p><label for="login">Login</label><br/>
+<%= text_field_tag 'login' %></p>
+
+<p><label for="password">Password</label><br/>
+<%= password_field_tag 'password' %></p>
+
+<!-- Uncomment this if you want this functionality
+<p><label for="remember_me">Remember me:</label>
+<%= check_box_tag 'remember_me' %></p>
+-->
+<p> use OpenID ... </p>
+<p> <%= text_field_tag "openid_url" %> </p>
+<p><%= submit_tag 'Log in' %></p>
+
+<% end %>
+</div>
+<div style="float:left;margin:20px;border:0px solid red;">
+
+<p style="font-size:12pt;">You can sign in openid by your account in following:</p>
+
+<div style="float:left;width:120px;margin:20px;overflow:hidden;font-size:10pt;word-wrap:break-word;">
+	<div style="height:50px;">
+	<a href="http://google.com/profiles/me">
+<img src="http://openid.net/images/get-logos/google.png" alt="Google" style="border:0px;" /></a>
+</div>
+<br>
+Use your&nbsp;<a href="http://google.com/profiles/me" style="">Google Profile URL</a>.e.g. http://www.google.com/profiles/xxxx
+</div>
+
+<div style="float:left;width:120px;margin:20px;overflow:hidden;font-size:10pt;word-wrap:break-word;">
+	<div style="height:50px;">	<a href="http://yahoo.com/">
+<img src="http://openid.net/wp-content/uploads/2009/11/yahoo.png" alt="Google" style="border:0px;" /></a>
+</div>
+<br>
+Type "yahoo.com" in openid text-box. you may need to enable yahoo open id first at<a href="http://openid.yahoo.com" style="">http://openid.yahoo.com</a>.
+</div>
+	
+
+
+	
+</div>

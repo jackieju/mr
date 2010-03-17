@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>手机看书网</title>
+  <%#= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'slider' %>
+ <%= stylesheet_link_tag 'jqModal' %>
+<!--[if lt IE 7]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/javascripts/util.js"></script>
+<script src="/javascripts/jquery-1.3.2.js"></script>
+
+<script src="/javascripts/jqModal.js"></script>
+<script src="/javascripts/ui.core.js"></script>
+<script src="/javascripts/ui.slider.js"></script>
+<script>
+function showPre2(){
+	$('#preference2').jqmShow();
+}
+</script>
+</head>
+<body>
+
+<p style="color: green"><%= flash[:notice] %></p>
+<center>
+	<div id="main" style="width:1008px;text-align:left;" >
+		<div id="header" class="" style="width:100%;border:red solid 0px" >
+			<div style="padding:2px 5px; border-bottom:1px solid #ccddee;height:20px;font-size:12pt;">
+				<% if current_user %>
+				<div style="float:left;">
+					你好， <%=current_user.login %> 
+				</div>
+				<div style="float:right;">
+					<a href="/account/logout" >Logout</a>
+				</div>
+				<% else %>
+				<a href="/account/login" title="Login to save your preference" >Login</a>
+				<% end %>
+				<a href="javascript:void(0);" onclick="showPre2();">意见</a>
+				<div style="float:right;font-size:10pt;">
+				
+				<span style="">	Reading style: </span>
+				<select>
+					<option>iphone</option>
+					<option>Nokia</option>
+					<option>Kindle</option>
+					<option>custom1</option>
+				</select>
+				
+				</div>
+			</div>
+			
+			<div style="clear:both;"></div>
+		</div>
+		<div id="middle" style="">
+			<%= yield %>
+		</div>
+		<div id="footer" style="width:100%;text-align:center;">
+			<div style="border-top:1px solid #cccccc;font-size:9pt;">
+				手机看书网
+			</div>
+		</div>
+	</div>
+</center>
+<div class="jqmWindow" id="preference2" style="background:transparent;border:0px;" >
+	<div class="" style="float:left;color:#ffffff;background:transparent;margin-top:8px;width:100px;"> 发表你的意见 
+		<textarea cols="50" rows="10"></textarea>	<input type="submit" /></div>
+ 
+	<div style="clear:both" ></div>
+
+</div>
+<script>
+$('#preference2').jqm();
+</script>
+</body>
+</html>
